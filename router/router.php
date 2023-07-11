@@ -8,8 +8,6 @@ class router {
         $this->controller = new controller();
     }
 
-
-
     public function get($uri,$action){
         $this->router[] = [
             'uri' => $uri,
@@ -62,13 +60,19 @@ class router {
 
                         case 'createDb':
                             $this->controller->create_Db($_POST);
-                            break;
-                            case 'table':
-                                $this->controller->showTable();
-                                break;
-                            case 'insertTable':
-                               
-                                $this->controller->createTable($_POST)   ; 
+                        break;
+
+                        case 'CreateTable':
+                                $this->controller->createTable($_POST);
+                        break;
+
+                        case 'insertRecords';
+                        $this->controller->InsertData();
+                        break;
+
+                        case 'getDatabase';
+                        $this->controller->getTables($_POST);
+                        break;
 
                         default :
                             $this->controller->HomePage();

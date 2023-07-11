@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="views/style.css">
-
 </head>
 
 <body>
@@ -22,11 +21,11 @@
           <button class="database">Create Database</button>
         </form>
 
-        <form action="/table" method="Post">
+        <form action="/CreateTable" method="Post">
           <button class="table">Create Table </button>
         </form>
 
-        <form action="" method="Post">
+        <form action="/insertRecords" method="Post">
           <button class="records">Insert Records</button>
         </form>
 

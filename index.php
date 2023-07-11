@@ -8,12 +8,11 @@ $controllers = new controller();
 $router = new router();
 
 $router->get('/', 'Home');
-
 $router->post('/createDb', 'createDb');
+$router->get('/CreateTable','CreateTable');
+$router->get('/insertRecords','insertRecords');
+$router->post('/getDatabase','getDatabase');
 
-$router->post('/table','table');
-
-$router->post('/inserttable','inserttable');
 
 
 $router->routing();
